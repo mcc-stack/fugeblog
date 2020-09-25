@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker | 533实验室Java后端知识点整理</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="533实验室Java后端知识点整理">
+    <link rel="preload" href="/fugeblog/assets/css/0.styles.73a54c7d.css" as="style"><link rel="preload" href="/fugeblog/assets/js/app.a08bd157.js" as="script"><link rel="preload" href="/fugeblog/assets/js/2.cef2cfde.js" as="script"><link rel="preload" href="/fugeblog/assets/js/21.1d34d75b.js" as="script"><link rel="prefetch" href="/fugeblog/assets/js/10.9d87c982.js"><link rel="prefetch" href="/fugeblog/assets/js/11.280bfc92.js"><link rel="prefetch" href="/fugeblog/assets/js/12.2321a81d.js"><link rel="prefetch" href="/fugeblog/assets/js/13.232569c7.js"><link rel="prefetch" href="/fugeblog/assets/js/14.432c1896.js"><link rel="prefetch" href="/fugeblog/assets/js/15.8de2258c.js"><link rel="prefetch" href="/fugeblog/assets/js/16.b35d17cf.js"><link rel="prefetch" href="/fugeblog/assets/js/17.11fa6731.js"><link rel="prefetch" href="/fugeblog/assets/js/18.a5827e9f.js"><link rel="prefetch" href="/fugeblog/assets/js/19.b43e3f60.js"><link rel="prefetch" href="/fugeblog/assets/js/20.3137f54d.js"><link rel="prefetch" href="/fugeblog/assets/js/22.1de42df7.js"><link rel="prefetch" href="/fugeblog/assets/js/23.77bfc2b7.js"><link rel="prefetch" href="/fugeblog/assets/js/24.f1664590.js"><link rel="prefetch" href="/fugeblog/assets/js/25.2fdb6e8a.js"><link rel="prefetch" href="/fugeblog/assets/js/3.6ad6d132.js"><link rel="prefetch" href="/fugeblog/assets/js/4.9cf12ef2.js"><link rel="prefetch" href="/fugeblog/assets/js/5.f78de9f8.js"><link rel="prefetch" href="/fugeblog/assets/js/6.324bd1a7.js"><link rel="prefetch" href="/fugeblog/assets/js/7.d58e5f5a.js"><link rel="prefetch" href="/fugeblog/assets/js/8.9207661d.js"><link rel="prefetch" href="/fugeblog/assets/js/9.6eaf5f2e.js">
+    <link rel="stylesheet" href="/fugeblog/assets/css/0.styles.73a54c7d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fugeblog/" class="home-link router-link-active"><!----> <span class="site-name">533实验室Java后端知识点整理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fugeblog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/lamarsan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fugeblog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/lamarsan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础部分</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>框架部分</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fugeblog/框架部分/Spring5.html" class="sidebar-link">Spring5</a></li><li><a href="/fugeblog/框架部分/SpringBoot.html" class="sidebar-link">SpringBoot</a></li><li><a href="/fugeblog/框架部分/MyBatis.html" class="sidebar-link">MyBatis</a></li><li><a href="/fugeblog/框架部分/Netty.html" class="sidebar-link">Netty</a></li><li><a href="/fugeblog/框架部分/Nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/fugeblog/框架部分/消息中间件.html" class="sidebar-link">消息中间件</a></li><li><a href="/fugeblog/框架部分/Docker.html" class="active sidebar-link">Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#常用命令" class="sidebar-link">常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#镜像操作" class="sidebar-link">镜像操作</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#容器操作" class="sidebar-link">容器操作</a></li></ul></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#docker-组成" class="sidebar-link">Docker 组成</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#镜像" class="sidebar-link">镜像</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#容器" class="sidebar-link">容器</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#仓库" class="sidebar-link">仓库</a></li></ul></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#docker-compose" class="sidebar-link">Docker Compose</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#docker-compose-yml" class="sidebar-link">docker-compose.yml</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#常见命令" class="sidebar-link">常见命令</a></li></ul></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#dockerfile-常见指令" class="sidebar-link">DockerFile 常见指令</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#docker-swarm" class="sidebar-link">Docker Swarm</a></li><li class="sidebar-sub-header"><a href="/fugeblog/框架部分/Docker.html#docker-容器的几种状态" class="sidebar-link">Docker 容器的几种状态</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>大数据</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker"><a href="#docker" class="header-anchor">#</a> Docker</h1> <p>Docker 是一个容器化平台，它将应用程序及其所有依赖项以容器的形式打包在一起，以确保应用程序在任何环境（无论是开发环境、测试环境还是生产环境）中无缝运行。</p> <h2 id="常用命令"><a href="#常用命令" class="header-anchor">#</a> 常用命令</h2> <h3 id="镜像操作"><a href="#镜像操作" class="header-anchor">#</a> 镜像操作</h3> <ul><li><p>列出本地镜像</p> <p><code>docker images</code></p></li> <li><p>获取镜像</p> <p><code>docker pull mysql</code></p></li> <li><p>搜索镜像</p> <p><code>docker search mysql</code></p></li> <li><p>删除镜像</p> <p><code>docker rmi -f mysql</code></p></li> <li><p>编写 Dockerfile</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#在centos上安装nginx</span>
+FROM centos
+<span class="token comment">#标明著作人的名称和邮箱</span>
+MAINTAINER jiabuli <span class="token number">649917837</span>@qq.com
+<span class="token comment">#测试一下网络环境</span>
+RUN <span class="token function">ping</span> -c <span class="token number">1</span> www.baidu.com
+<span class="token comment">#安装nginx必要的一些软件</span>
+RUN yum -y <span class="token function">install</span> gcc <span class="token function">make</span> pcre-devel zlib-devel <span class="token function">tar</span> zlib
+<span class="token comment">#把nginx安装包复制到/usr/src/目录下</span>
+ADD nginx-1.15.8.tar.gz /usr/src/
+<span class="token comment">#切换到/usr/src/nginx-1.15.8编译并且安装nginx</span>
+RUN <span class="token builtin class-name">cd</span> /usr/src/nginx-1.15.8 <span class="token punctuation">\</span>
+    <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> /usr/local/nginx <span class="token punctuation">\</span>
+    <span class="token operator">&amp;&amp;</span> ./configure --prefix<span class="token operator">=</span>/usr/local/nginx <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span> <span class="token punctuation">\</span>
+    <span class="token operator">&amp;&amp;</span> <span class="token function">ln</span> -s /usr/local/nginx/sbin/nginx /usr/local/sbin/ <span class="token punctuation">\</span>
+    <span class="token operator">&amp;&amp;</span> nginx
+<span class="token comment">#删除安装nginx安装目录</span>
+RUN <span class="token function">rm</span> -rf /usr/src/nginx-nginx-1.15.8
+<span class="token comment">#对外暴露80端口</span>
+EXPOSE <span class="token number">80</span>
+<span class="token comment">#启动nginx</span>
+CMD <span class="token punctuation">[</span><span class="token string">&quot;nginx&quot;</span>, <span class="token string">&quot;-g&quot;</span>, <span class="token string">&quot;daemon off;&quot;</span><span class="token punctuation">]</span>
+</code></pre></div></li> <li><p>构建镜像</p> <p><code>docker build -f /docker/dockerfile/nginx -t nginx：1.15.8</code></p></li></ul> <h3 id="容器操作"><a href="#容器操作" class="header-anchor">#</a> 容器操作</h3> <ul><li><p>启动容器</p> <p><code>docker run -i -t --name mysentos</code></p> <blockquote><p>参数说明：</p> <p>-i：交互式操作</p> <p>-t：终端</p> <p>--name：为容器指定名字</p></blockquote></li> <li><p>启动已停止的容器</p> <p><code>docker start/restart mysql</code></p></li> <li><p>查看容器</p> <p><code>docker ps</code></p></li> <li><p>停止容器</p> <p><code>docker stop/kill/(rm -f) mysql</code></p></li> <li><p>生成镜像</p> <p><code>docker commit -a=&quot;lamarsan&quot; -m=&quot;my mysql&quot; [容器ID] mysql:5.7</code></p> <blockquote><p>参数说明：</p> <p>-a：镜像作者</p> <p>-c：用 Dockerfile 指令来创建镜像</p> <p>-m：说明</p> <p>-p：在 commit 时，将容器暂停</p></blockquote></li></ul> <h2 id="docker-组成"><a href="#docker-组成" class="header-anchor">#</a> Docker 组成</h2> <p>镜像、容器、仓库。</p> <h3 id="镜像"><a href="#镜像" class="header-anchor">#</a> 镜像</h3> <p>Docker 镜像（Image）就是一个<strong>只读</strong>的模板。镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器。</p> <p>镜像由一系列只读层构建，所谓的层代表着镜像 Dockerfile 中的一条指令。</p> <h3 id="容器"><a href="#容器" class="header-anchor">#</a> 容器</h3> <ul><li>Docker 利用容器（Container）独立运行的一个或一组应用。容器是用镜像创建的运行实例。</li> <li>它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。</li> <li><strong>可以把容器看做是一个简易版的 Linux 环境</strong>（包括 root 用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。</li> <li>容器的定义和镜像几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写的。</li></ul> <h3 id="仓库"><a href="#仓库" class="header-anchor">#</a> 仓库</h3> <p>仓库是集中存放镜像文件的场所。</p> <p>仓库分为公开仓库（Public）和私有仓库（Private）两种形式。最大的公开仓库是 Docker Hub，存放了数量庞大的镜像供用户下载。国内的公开仓库包括阿里云 、网易云 等。</p> <h2 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker Compose</h2> <p>Docker Compose 是 docker 提供的一个命令行工具，用来定义和运行由多个容器组成的应用。使用 compose，我们可以通过 YAML 文件声明式的定义应用程序的各个服务，并由单个命令完成应用的创建和启动。</p> <p><strong>使用步骤如下：</strong></p> <ol><li>定义应用环境，<code>Dockerfile</code>以便可以在任何地方复制。</li> <li>定义组成应用程序的服务，<code>docker-compose.yml</code> 以便它们可以在隔离的环境中一起运行。</li> <li>Run <code>docker-compose up</code>and Compose 启动并运行您的整个应用程序。</li></ol> <h3 id="docker-compose-yml"><a href="#docker-compose-yml" class="header-anchor">#</a> docker-compose.yml</h3> <p>这是 Docker Compose 运行时所需的配置文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>version: <span class="token string">'3'</span>
+services:
+  <span class="token comment"># 定义web服务</span>
+  web:
+  	<span class="token comment"># 文件地址</span>
+    build: <span class="token builtin class-name">.</span>
+    <span class="token comment"># 开放端口</span>
+    ports:
+    - <span class="token string">&quot;5000:5000&quot;</span>
+    <span class="token comment"># 卷挂载路径设置</span>
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  <span class="token comment"># 定义redis服务</span>
+  redis:
+    image: redis
+volumes:
+  logvolume01: <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>编写完成后使用<code>docker-compose up -d</code>进行运行。该<code>web</code>服务使用从<code>Dockerfile</code>当前目录中构建的映像。然后，它将容器和主机绑定到暴露的端口<code>5000</code>。</p> <h3 id="常见命令"><a href="#常见命令" class="header-anchor">#</a> 常见命令</h3> <ul><li><p>执行命令运行容器</p> <p><code>docker-compose up -d</code></p></li> <li><p>查看镜像</p> <p><code>docker images</code></p></li> <li><p>停止和删除容器</p> <p><code>docker-compose stop/rm redis</code></p></li></ul> <h2 id="dockerfile-常见指令"><a href="#dockerfile-常见指令" class="header-anchor">#</a> DockerFile 常见指令</h2> <ul><li>FROM：指定基础镜像</li> <li>LABEL：功能是为镜像指定标签</li> <li>RUN：运行指定的命令</li> <li>CMD：容器启动时要运行的命令</li></ul> <h2 id="docker-swarm"><a href="#docker-swarm" class="header-anchor">#</a> Docker Swarm</h2> <p>Docker Swarm 是 Docker 的本机群集。它将 Docker 主机池转变为单个虚拟 Docker 主机。Docker Swarm 提供标准的 Docker API，任何已经与 Docker 守护进程通信的工具都可以使用 Swarm 透明地扩展到多个主机。</p> <h2 id="docker-容器的几种状态"><a href="#docker-容器的几种状态" class="header-anchor">#</a> Docker 容器的几种状态</h2> <ul><li>运行</li> <li>已暂停</li> <li>重新启动</li> <li>已退出</li></ul> <p>可以通过运行命令来识别 Docker 容器的状态：</p> <p><code>docker ps -a</code></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fugeblog/框架部分/消息中间件.html" class="prev">
+        消息中间件
+      </a></span> <span class="next"><a href="/fugeblog/算法/排序算法.html">
+        排序算法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fugeblog/assets/js/app.a08bd157.js" defer></script><script src="/fugeblog/assets/js/2.cef2cfde.js" defer></script><script src="/fugeblog/assets/js/21.1d34d75b.js" defer></script>
+  </body>
+</html>
